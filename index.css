@@ -48,3 +48,47 @@ strong {
     box-shadow: 0 0 10px gray;
     margin: auto;
 }
+
+/* Descendant Combinator: styles all paragraphs inside ul */
+ul p {
+    font-style: italic;
+    color: gray;
+}
+
+/* Child Combinator: styles only direct child paragraphs of ul */
+ul>p {
+    font-weight: bold;
+    color: black;
+}
+
+/* Difference: Descendant applies to all nested p elements, while Child applies only to direct children. */
+
+/* Hover Pseudoclass: Changes link color on hover */
+a:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+/* First-child Pseudoclass: Styles the first paragraph in each section */
+p:first-child {
+    font-weight: bold;
+    color: darkblue;
+}
+
+/* Marker Pseudoelement: Styles the bullet points of lists */
+li::marker {
+    color: navy;
+    font-size: 1.2em;
+}
+
+/* Selection Pseudoelement: Changes color when text is selected */
+::selection {
+    background-color: yellow;
+    color: black;
+}
+
+/* Attribute Selector: Styles external links */
+a[href^="http"] {
+    color: green;
+    font-weight: bold;
+}
